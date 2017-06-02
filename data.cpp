@@ -19,7 +19,7 @@ int data(){
 						fout << line << "\n";
 						//cout << line << endl;
 					}
-				}
+				}//wow!
 				fout.close();
 				if (! fout) std:cerr << "Error writing\n";
 				if (!fp.eof()) std::cerr << "Error reading\n";
