@@ -7,6 +7,44 @@ using namespace std;
 
 
 int data(){
+	string hit;
+	double string, dom_n;
+	double allN[] = {4,7,10,13,16,19,21,24,27,30,33,36,39,42,45,48,51,54,57,60};
+	for (int n : allN) {
+		std::ifstream fp(Form("180517_OM%d_2250M_CPU_data.txt",n));
+		if (fp.is_open()) {
+			std::ofstream fout(Form("Dom_%d",n));
+			if (!fout.is_open())	std::cerr << "Cannot open fout\n";
+				std::string line;
+				while (std::getline(fp, line))
+				{
+					stringstream linestream(line);
+					linestream >> hit;
+					linestream >> string;
+					linestream >> dom_n;
+					//cout << hit << " " << string << " " << dom_n << endl;	
+					if (string == 2 && dom_n == n){
+						fout << line << "\n";
+						//cout << line << endl;
+					}
+				}
+				fout.close();
+			//	if (! fout) std:cerr << "Error writing\n";
+			//	if (!fp.eof()) std::cerr << "Error reading\n";
+			}
+	}
+	return 0;
+}
+/*
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+using namespace std;
+
+
+int data(){
 	int allN[] = {4,7,10,13,16,19,21,24,27,30,33,36,39,42,45,48,51,54,57,60};
 	for (int n : allN) {
 		std::ifstream fp(Form("180517_OM%d_2250M_CPU_data.txt", n));
@@ -27,7 +65,7 @@ int data(){
 	}
 	return 0;
 }
-
+*/
 /*int data(){
 	//std::basic_ifstream;
 	//std::stringstream;
