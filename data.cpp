@@ -29,9 +29,11 @@ int data(){
 					}
 				}
 				fout.close();
+				cout << "Dom _ " << n << " -> Data Reduction is Done." << endl;
 			//	if (! fout) std:cerr << "Error writing\n";
 			//	if (!fp.eof()) std::cerr << "Error reading\n";
 			}
+		fp.close();
 	}
 	return 0;
 }
