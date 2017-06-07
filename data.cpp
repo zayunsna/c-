@@ -37,7 +37,7 @@ int data(){
 		else { cout << " file not found! *Dom _ " << n <<".txt" << endl;}
 		fp.close();
 	}
-	cour << "  --- Exit the Program \n" << endl;
+	cour << " \n --- Exit the Program \n\n" << endl;
 	exit(0);
 }
 /*
