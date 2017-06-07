@@ -13,7 +13,7 @@ int data(){
 	for (int n : allN) {
 		std::ifstream fp(Form("180517_OM%d_2250M_CPU_data.txt",n));
 		if (fp.is_open()) {
-			std::ofstream fout(Form("Dom_%d",n));
+			std::ofstream fout(Form("Dom_%d.txt",n));
 			if (!fout.is_open())	std::cerr << "Cannot open fout\n";
 				std::string line;
 				while (std::getline(fp, line))
