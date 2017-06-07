@@ -10,6 +10,7 @@ int data(){
 	string hit;
 	double string, dom_n;
 	double allN[] = {4,7,10,13,16,19,21,24,27,30,33,36,39,42,45,48,51,54,57,60};
+	cout << "__________________________________________________________" << endl;
 	for (int n : allN) {
 		std::ifstream fp(Form("180517_OM%d_2250M_CPU_data.txt",n));
 		if (fp.is_open()) {
@@ -29,10 +30,11 @@ int data(){
 					}
 				}
 				fout.close();
-				cout << "Dom _ " << n << " -> Data Reduction is Done." << endl;
+				cout << "   --- File :: Dom _ " << n << " -> Data Reduction is Done." << endl;
 			//	if (! fout) std:cerr << "Error writing\n";
 			//	if (!fp.eof()) std::cerr << "Error reading\n";
 			}
+		else { cout << " file not found! *Dom _ " << n <<".txt" << endl;}
 		fp.close();
 	}
 	return 0;
