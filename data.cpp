@@ -5,7 +5,14 @@
 
 using namespace std;
 
-
+/*
+*
+*
+*   R E A D   M E  !   R E A D   M E  !   R E A D   M E  !
+*   This c++ cord was made by 'ROOT' function. so when you run this cord, you only use 'ROOT'. <Over the version 6.08>
+*
+*
+ */
 int data(){
 	string hit;
 	double string, dom_n;
